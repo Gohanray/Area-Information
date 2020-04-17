@@ -17,7 +17,7 @@
 	</head>
 
    <body>
-      
+      {% block content %}
       <div class="header">
          <h1> THIRUPUR DISTRICT AREA INFORMATION</h1>
 	  </div>
@@ -26,6 +26,6 @@
          result of calculation : {{ result }}
          <h2><a href = "\">Go back to home page</a></h2>
       </div>
-      
+      {% endblock %}
    </body>
 </html>
