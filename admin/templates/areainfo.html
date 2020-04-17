@@ -1,0 +1,64 @@
+<html>
+	<head>
+		<style>
+			.center{
+				width:200px;
+				float: left;
+				margin-left: 600px;
+			}
+			.center1{
+				width:200px;
+				float: left;
+				margin-left: 30px;
+			}
+			.header{
+				float: left;
+				width: 100%;
+				margin-left: 490px;
+			}
+		</style>
+	</head>
+
+   <body>
+	   {% block content %}
+	   <div class="header">
+			<h3>THIRUPUR DISTRICT AREA INFORMATION</h3>
+	   </div>
+	   <div class="center">
+			<form action = "calculate">
+				Locality Name<br>
+				<input type = "text" name = "nm" />
+				<br>
+				Area of the locality<br>
+				<input type = "number" name = "area" ><br>
+				<br>
+				Units in which area has been entered<br>
+				<input type = "radio" id = "sq_metre" name= "units" value="sq_metre"/>
+				<label for="sq_metre">Square Metres</label>
+				<br>
+				<input type = "radio" id = "sq_feet" name= "units" value="sq_feet"/>
+				<label for="sq_feet">Square Feet</label>
+				<br>
+				<input type = "radio" id = "sq_km" name= "units" value="sq_km"/>
+				<label for="sq_km">Square Kilometres</label>
+				<br>
+				<br>
+				Risk Level<br>
+				<input type = "radio" id = "low" name= "risk" value="low"/>
+				<label for="low">Low Risk Zone(infected<4)>
+				<br>
+				<input type = "radio" id = "medium" name= "risk" value="medium"/>
+				<label for="medium">Medium Risk Zone(infected<10)>
+				<br>
+				<input type = "radio" id = "high" name= "risk" value="high"/>
+				<label for="high">High Risk Zone(infected>10)</label>
+				<br>
+				<br>
+		 		<div class="center1">
+					<input type = "submit" value = "submit" /><br>
+				</div>
+			</form>
+		</div>	
+		{% endblock %}	 
+	</body>
+</html>
